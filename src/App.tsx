@@ -17,17 +17,9 @@ const App: FC = (props: Props) => {
   const handleAdd = (e: FormEvent) => {
     e.preventDefault()
 
-    if (todo) {
-      setTodos([
-        ...todos,
-        {
-          id: Date.now(),
-          todo: todo,
-          isDone: false
-        }
-      ])
-      setTodo('')
-    }
+    const newTodo = { id: Date.now(), todo, isDone: false }
+    todo && setTodos([...todos, newTodo])
+    setTodo('')
   }
 
   return (

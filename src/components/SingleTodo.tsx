@@ -65,8 +65,8 @@ const SingleTodo: FC<Props> = ({ todo, todos, setTodos }) => {
                         onChange={updateTodo}
                     />
                     : todo.isDone
-                        ? <s className='todos__single--text'>{editTodo}</s>
-                        : <span className="todos__single--text">{editTodo}</span>
+                        ? <s className='todos__single--text'>{todo.todo}</s>
+                        : <span className="todos__single--text">{todo.todo}</span>
             }
 
             <div>
